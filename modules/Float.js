@@ -1,3 +1,3 @@
 const Float = {};
 
-export default Float;
+module.exports = Float;
