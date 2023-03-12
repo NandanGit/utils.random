@@ -1,7 +1,7 @@
-import Color from './modules/Color';
-import Float from './modules/Float';
-import Int from './modules/Integer';
-import Str from './modules/String';
+const Color = require('./modules/Color');
+const Float = require('./modules/Float');
+const Int = require('./modules/Integer');
+const Str = require('./modules/String');
 
 /**
  * Collection of functions that depend on randomness
@@ -33,4 +33,4 @@ const $rand = {
 	color: Color,
 };
 
-export default $rand;
+module.exports = $rand;

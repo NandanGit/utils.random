@@ -1,3 +1,3 @@
 const Int = {};
 
-export default Int;
+module.exports = Int;

@@ -1,3 +1,3 @@
 const Str = {};
 
-export default Str;
+module.exports = Str;

@@ -1,3 +1,3 @@
 const Color = {};
 
-export default Color;
+module.exports = Color;
