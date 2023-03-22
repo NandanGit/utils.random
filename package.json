@@ -1,11 +1,12 @@
 {
-	"name": "@nandn/utils.random",
+	"name": "@nandn/random",
 	"version": "1.0.0",
-	"description": "Some utility functions related to random (randInt, randomString etc)",
+	"description": "Some utility functions related to randomness (randInt, randomString etc)",
 	"main": "index.js",
 	"scripts": {
 		"test": "jest --watch",
-		"test-all": "jest --watchAll"
+		"test-all": "jest --watchAll",
+		"prepack": "npmignore --auto"
 	},
 	"repository": {
 		"type": "git",
@@ -23,6 +24,12 @@
 	},
 	"homepage": "https://github.com/NandanGit/utils.random#readme",
 	"devDependencies": {
-		"jest": "^29.5.0"
+		"jest": "^29.5.0",
+		"npmignore": "^0.3.0"
+	},
+	"publishConfig": {
+		"ignore": [
+			"tests/"
+		]
 	}
 }
