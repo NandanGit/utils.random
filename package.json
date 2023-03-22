@@ -1,24 +1,35 @@
 {
-  "name": "@nandn/utils.random",
-  "version": "1.0.0",
-  "description": "Some utility functions related to random (randInt, randomString etc)",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/NandanGit/utils.random.git"
-  },
-  "keywords": [
-    "utils",
-    "random",
-    "utility"
-  ],
-  "author": "Nandan Reddy [@NandanGit]",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/NandanGit/utils.random/issues"
-  },
-  "homepage": "https://github.com/NandanGit/utils.random#readme"
+	"name": "@nandn/random",
+	"version": "1.0.0",
+	"description": "Some utility functions related to randomness (randInt, randomString etc)",
+	"main": "index.js",
+	"scripts": {
+		"test": "jest --watch",
+		"test-all": "jest --watchAll",
+		"prepack": "npmignore --auto"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/NandanGit/utils.random.git"
+	},
+	"keywords": [
+		"utils",
+		"random",
+		"utility"
+	],
+	"author": "Nandan Reddy [@NandanGit]",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/NandanGit/utils.random/issues"
+	},
+	"homepage": "https://github.com/NandanGit/utils.random#readme",
+	"devDependencies": {
+		"jest": "^29.5.0",
+		"npmignore": "^0.3.0"
+	},
+	"publishConfig": {
+		"ignore": [
+			"tests/"
+		]
+	}
 }

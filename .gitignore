@@ -133,3 +133,6 @@ dist
 sandbox/
 *.sandbox.*
 sandbox.*
+*.sandbox/
+.DS_Store
+.npmignore
