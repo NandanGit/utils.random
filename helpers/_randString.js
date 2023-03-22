@@ -1,4 +1,5 @@
 const _randArrElem = require('./_randArrElem');
+const _randElemWithDistribution = require('./_randElemWithDistribution');
 
 const CHAR_POOL = {
 	lowerCase: 'abcdefghijklmnopqrstuvwxyz'.split(''),
@@ -20,11 +21,18 @@ const __getPool = (options) => {
 	return filteredCharPool;
 };
 
-const _randSting = (length, options) => {
-	const charPool = __getPool(options);
+const _randSting = (length, options, selectiveDistribution = true) => {
+	// console.log(options);
+	const charPool = {
+		...CHAR_POOL,
+		specialCharacters: options.availableSpecialCharacters,
+	};
+	delete options.availableSpecialCharacters;
+	// console.log(charPool);
+	// console.log(options);
 	let acc = '';
 	for (ind = 0; ind < length; ind++) {
-		acc += _randArrElem(charPool);
+		acc += _randElemWithDistribution(charPool, options, selectiveDistribution);
 	}
 	return acc;
 };
