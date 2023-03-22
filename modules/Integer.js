@@ -1,3 +1,5 @@
+const _randInt = require('../helpers/_randInt');
+
 /**
  * Returns a random Integer
  * - if only one arg is provided, the function returns a random number between 0 and the provided number
@@ -26,7 +28,7 @@ const Int = (...args) => {
 	if (max < min) [min, max] = [max, min];
 	min = Math.ceil(min);
 	max = Math.floor(max);
-	return Math.floor(Math.random() * (max - min + 1)) + min;
+	return _randInt(min, max);
 };
 
 exports = module.exports = Int;

@@ -4,7 +4,8 @@
 	"description": "Some utility functions related to random (randInt, randomString etc)",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "jest --watch",
+		"test-all": "jest --watchAll"
 	},
 	"repository": {
 		"type": "git",
@@ -20,5 +21,8 @@
 	"bugs": {
 		"url": "https://github.com/NandanGit/utils.random/issues"
 	},
-	"homepage": "https://github.com/NandanGit/utils.random#readme"
+	"homepage": "https://github.com/NandanGit/utils.random#readme",
+	"devDependencies": {
+		"jest": "^29.5.0"
+	}
 }
