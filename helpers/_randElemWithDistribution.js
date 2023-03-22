@@ -5,6 +5,7 @@ const _randElemWithDistribution = (
 	distribution,
 	selective = true
 ) => {
+	// console.log(`selective: ${selective}`);
 	const distrCopy = { ...distribution };
 	distribution = {};
 	for (poolName in poolsObj) {
@@ -12,13 +13,23 @@ const _randElemWithDistribution = (
 	}
 	distribution = { ...distribution, ...distrCopy };
 	// console.log(distribution);
-	const primaryPool = [];
+	if (selective) {
+		const primaryPool = [];
+		Object.keys(distribution).forEach((poolName) => {
+			for (i = 0; i < distribution[poolName]; i++) {
+				primaryPool.push(poolName);
+			}
+		});
+		return _randArrElem(poolsObj[_randArrElem(primaryPool)]);
+	}
+	const pool = [];
 	Object.keys(distribution).forEach((poolName) => {
 		for (i = 0; i < distribution[poolName]; i++) {
-			primaryPool.push(poolName);
+			pool.push(...poolsObj[poolName]);
 		}
 	});
-	return _randArrElem(poolsObj[_randArrElem(primaryPool)]);
+	// console.log(pool);
+	return _randArrElem(pool);
 };
 
 module.exports = _randElemWithDistribution;

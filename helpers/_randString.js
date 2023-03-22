@@ -32,7 +32,7 @@ const _randSting = (length, options, selectiveDistribution = true) => {
 	// console.log(options);
 	let acc = '';
 	for (ind = 0; ind < length; ind++) {
-		acc += _randElemWithDistribution(charPool, options);
+		acc += _randElemWithDistribution(charPool, options, selectiveDistribution);
 	}
 	return acc;
 };
